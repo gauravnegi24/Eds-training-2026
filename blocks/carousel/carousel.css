@@ -1,0 +1,125 @@
+/* Carousel Container */
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 3rem auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgb(0 0 0 / 15%);
+}
+
+/* Slides */
+.carousel-slide {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Dark Overlay */
+.carousel-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 45%);
+}
+
+.carousel-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.carousel-content h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.carousel-content p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* CTA Button */
+.carousel-content .button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ea5e9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.carousel-content .button:hover {
+  background: #0284c7;
+  transform: translateY(-2px);
+}
+
+/* Navigation Buttons */
+.carousel .carousel-navigation-buttons {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.carousel .carousel-navigation-buttons button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 80%);
+  color: #333;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.carousel .carousel-navigation-buttons button:hover {
+  background: #fff;
+}
+
+/* Indicators */
+.carousel .carousel-slide-indicators {
+  bottom: 20px;
+}
+
+.carousel .carousel-slide-indicator button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 60%);
+}
+
+.carousel .carousel-slide-indicator button.selected {
+  background: #0ea5e9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .carousel-slide {
+    min-height: 400px;
+    padding: 2rem;
+  }
+
+  .carousel-content h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-content p {
+    font-size: 1rem;
+  }
+}
